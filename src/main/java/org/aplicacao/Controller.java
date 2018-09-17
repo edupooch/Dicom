@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+
 import org.dcm4che3.data.Attributes;
 import org.dcm4che3.data.Tag;
 import org.weasis.dicom.op.CFind;
@@ -41,6 +42,7 @@ public class Controller {
                 new DicomParam(Tag.StudyInstanceUID),
                 new DicomParam(Tag.StudyID),
         };
+
         ObservableList<String> data = FXCollections.observableArrayList();
         data.add(new DicomParam(Tag.AccessionNumber).getTagName());
         data.add(new DicomParam(Tag.PatientID).getTagName());
@@ -50,7 +52,7 @@ public class Controller {
         for (DicomParam param : params) {
             TableColumn<Attributes, String> coluna = new TableColumn<>(param.getTagName());
             coluna.setCellValueFactory(p ->
-                    new SimpleStringProperty(p.getValue().getString(param.getTag()) != null ? p.getValue().getString(param.getTag()) : ""));
+                    new SimpleStringProperty(p.getValue().getString(param.getTag(), "")));
             table.getColumns().add(coluna);
         }
     }
@@ -72,7 +74,6 @@ public class Controller {
                     break;
             }
         }
-
 
         DicomParam[] params = {
                 new DicomParam(Tag.AccessionNumber, accessNumber),
