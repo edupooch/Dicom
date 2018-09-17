@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="weasis-dicom-tools">
+    <output-path>$PROJECT_DIR$/classes/artifacts/weasis_dicom_tools</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="org.aplicacao.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="weasis_dicom_tools.jar">
+        <element id="module-output" name="weasis-dicom-tools" />
+      </element>
+    </root>
+  </artifact>
+</component>
