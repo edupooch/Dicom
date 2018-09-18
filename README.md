@@ -1,20 +1,16 @@
-# weasis-dicom-tools #
+# DICOM Client #
 
-[![License](https://img.shields.io/badge/License-EPL%202.0-blue.svg)](https://opensource.org/licenses/EPL-2.0) [![Build Status](https://travis-ci.org/nroduit/weasis-dicom-tools.svg?branch=master)](https://travis-ci.org/nroduit/weasis-dicom-tools)   
-[![Sonar](https://sonarcloud.io/api/project_badges/measure?project=org.weasis%3Aweasis-dicom-tools&metric=ncloc)](https://sonarcloud.io/component_measures?id=org.weasis%3Aweasis-dicom-tools) [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=org.weasis%3Aweasis-dicom-tools&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=org.weasis%3Aweasis-dicom-tools) [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=org.weasis%3Aweasis-dicom-tools&metric=sqale_rating)](https://sonarcloud.io/component_measures?id=org.weasis%3Aweasis-dicom-tools) [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=org.weasis%3Aweasis-dicom-tools&metric=security_rating)](https://sonarcloud.io/component_measures?id=org.weasis%3Aweasis-dicom-tools) [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=org.weasis%3Aweasis-dicom-tools&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.weasis%3Aweasis-dicom-tools)   
+Repositório do trabalho final da Disciplina de Interoperabilidade, Padrões e Comunicação do curso de Informática Biomédica da UFCSPA.
 
-This project provides a DICOM API for [C-Echo](src/main/java/org/weasis/dicom/op/Echo.java), [C-Move](src/main/java/org/weasis/dicom/op/CMove.java), [C-Get](src/main/java/org/weasis/dicom/op/CGet.java), [C-Find](src/main/java/org/weasis/dicom/op/CFind.java) and [C-Store](src/main/java/org/weasis/dicom/op/CStore.java) based on dcm4che3. The implementation allows to follow the progression of an DICOM operation like C-Move and gives its status. It contains also some other classes for worklist SCU, strore SCP, dicomization, DICOM forward with attributes modification on the fly and a DICOM gateway (experimental).
+**Desenvolvimento de uma Aplicação Cliente Utilizando o Padrão DICOM.**
+O presente trabalho foca apenas no serviço de Query/Retrieve do padrão DICOM, relatando a criação de uma aplicação Service Class User (SCU), que atua como cliente se conectando a um Service Class Provider (SCP), que é o servidor DICOM que contém os arquivos de exames de imagem.
+A aplicação foi  desenvolvida em Java e JavaFX e consiste em um campo de busca, onde o usuário pode selecionar algum parâmetro e digitar valores para buscar entradas correspondentes no servidor. O servidor retornará as entradas solicitadas e elas serão exibidas em forma de tabela, na qual o usuário pode consultar os dados de todas as entradas retornadas.
 
-This project replaces [weasis-dicom-operations](https://github.com/nroduit/weasis-dicom-operations) and now this library is used by recent versions of [weasis-pacs-connector](https://github.com/nroduit/weasis-pacs-connector) and in the weasis-dicom-codec module of [Weasis](https://github.com/nroduit/Weasis).
+[Link para a apresentação](https://docs.google.com/presentation/d/e/2PACX-1vQ9-Y0X0qntqxJSXS1WhHxN7eggFdW369gah-VgOzp_-lclBXZ7-FoIja_RevyGgLszL-lS8Rebw5Na/pub?start=false&loop=false&delayms=60000&slide=id.g281c42ea26_2_15) 
+[Link para o relatório](https://drive.google.com/open?id=1afHViKaESfN3te9UcsYSCzt72AyXYUna)
 
-**Getting started**: [see the test classes](https://github.com/nroduit/weasis-dicom-tools/tree/master/src/test/java/org/weasis/dicom)
+[Weasis](https://github.com/nroduit/Weasis).
 
-## Build weasis-dicom-tools ##
 
-Prerequisites: JDK 8 and Maven 3
-
-The master branch requires Java 8+ and the 1.0.x branch requires Java 7+.
-
-Execute the maven command `mvn clean install` in the root directory of the project.
-
-Note: the dependencies are not includes in the jar file, see in [pom.xml](pom.xml) which libraries are required (at least dcm4che-core and dcm4che-net).
+## [weasis-dicom-tools](https://github.com/nroduit/weasis-dicom-tools ) ##
+Pré-requisitos: JDK 8 e Maven 3
